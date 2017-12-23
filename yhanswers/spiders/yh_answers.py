@@ -46,10 +46,11 @@ class YhAnswersSpider(scrapy.Spider):
             url = "https://br.answers.yahoo.com%s" % link
             yield Request(url, callback=self.extract_question)
 
-
     def extract_question(self, response):
         question = QuestionItem()
         question['title'] = response.xpath("//*[contains(@class, 'Fz-24 Fw-300 Mb-10')]/text()").extract_first()
         question['description'] = response.xpath("//*[contains(@class, 'D-n ya-q-full-text Ol-n')]/text()").extract_first()
+        question['following'] = response.xpath("//*[contains(@class, 'follow-text')]/text()").extract_first()
+        question['last_answers'] = response.xpath("//*[contains(@class, 'Mstart-75 Pos-r')]").extract_first()
 
         return question

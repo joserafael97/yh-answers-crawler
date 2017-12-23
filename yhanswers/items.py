@@ -11,6 +11,10 @@ import scrapy
 class QuestionItem(scrapy.Item):
     title = scrapy.Field()
     description = scrapy.Field()
+    following = scrapy.Field()
+    answers_number = scrapy.Field()
+    last_answers = scrapy.Field()
+
 
 class YhanswersItem(scrapy.Item):
     # define the fields for your item here like:
