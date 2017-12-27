@@ -26,10 +26,10 @@ class YhAnswersSpider(scrapy.Spider):
             Returns:
                 scrapy.Request
         """
-        main_categories = response.xpath("//*[contains(@href, 'dir/index?')]/@href").extract_first()
-        # for link in main_categories:
-        url = "https://br.answers.yahoo.com%s" % main_categories
-        yield Request(url, callback=self.parse_sub_categories)
+        main_categories = response.xpath("//*[contains(@href, 'dir/index?')]/@href").extract()
+        for link in main_categories:
+            url = "https://br.answers.yahoo.com%s" % link
+            yield Request(url, callback=self.parse_sub_categories)
 
 
     def parse_sub_categories(self, response):
