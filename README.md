@@ -1,7 +1,7 @@
 # YH Answers Crawler 
 [![Build Status](https://travis-ci.org/JoseRafael97/yh-answers-crawler.svg?branch=master)](https://travis-ci.org/JoseRafael97/yh-answers-crawler)
 
-Crawler in Yahoo answers for get question
+Crawler in Yahoo answers for get questions
 
 
 ## How to install
