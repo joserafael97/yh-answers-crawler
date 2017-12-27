@@ -9,24 +9,24 @@ from bs4 import BeautifulSoup, Comment
 class HtmlUtil(object):
 
     @staticmethod
-    def remove_tag_html(nome_tag, source):
-        """Remove uma tag do código fonte passado
+    def remove_all_tags(html):
+        """Remove all tags html code
             Args:
-                nome_tag: nome da tag html que deseja remover.
-                source: código fonte ao qual a tag será removida
+                html: html code for remove tags
             Returns:
-                código fonte sem a presença da tag html passada.
+                text without html tags.
         """
-        return remove_tags_with_content(source, (nome_tag,))
+        soup = BeautifulSoup(html)
+        return soup.get_text()
 
     @staticmethod
     def converte_codigo_font_html_response(source, url_pagina):
-        """Converte código fonte html para o padrão Response reconhecido pelo crawler
+        """Convert code string in scrapy.Response
             Args:
-                source: código fonte que deve ser convertido para Response.
-                url_pagina: URL do código fonte extraído.
+                source: Source html code.
+                url_pagina: URL of page extracted
             Returns:
-                Objeto Response.
+                Object scrapy.Response.
         """
         return HtmlResponse(url=url_pagina, body=source, encoding='utf-8')
 
