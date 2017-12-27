@@ -3,12 +3,16 @@
 
 Crawler in Yahoo answers for get question
 
-## Requeriments
-Python 2.7 
 
-## For use crawler
-1 - `git clone` in project  
-2 - In terminal use `pip install Scrapy` for install Scrapy,  for more details access [here](https://doc.scrapy.org/en/latest/intro/install.html)
+## How to install
 
-## running crawler and generate CSV file.
-`scrapy crawl YhAnswersSpider`
+.. code:: shell
+
+    pip install Scrapy
+    pip install beautifulsoup4
+    
+    
+## How to use
+.. code:: shell
+
+    scrapy crawl YhAnswersSpider
