@@ -1,14 +1,13 @@
 # YH Answers Crawler 
 [![Build Status](https://travis-ci.org/JoseRafael97/yh-answers-crawler.svg?branch=master)](https://travis-ci.org/JoseRafael97/yh-answers-crawler)
 
-Crawler in Yahoo answers for get question
+Crawler in Yahoo answers for get questions
 
-## Requeriments
-Python 2.7 
 
-## For use crawler
-1 - `git clone` in project  
-2 - In terminal use `pip install Scrapy` for install Scrapy,  for more details access [here](https://doc.scrapy.org/en/latest/intro/install.html)
-
-## running crawler and generate CSV file.
-`scrapy crawl YhAnswersSpider`
+## How to install
+    pip install Scrapy
+    pip install beautifulsoup4
+    
+    
+## How to use
+    scrapy crawl YhAnswersSpider
