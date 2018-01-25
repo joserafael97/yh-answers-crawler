@@ -1,0 +1,5 @@
+## dev requirements
+scrapy
+beautifulsoup4
+
+## Test and quality analysis
